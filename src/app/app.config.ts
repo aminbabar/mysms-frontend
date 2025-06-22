@@ -1,12 +1,11 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Routes } from '@angular/router';
+import { MessageFormComponent } from './pages/message-form/message-form';
 
-import { routes } from './app.routes';
+const routes: Routes = [
+  { path: '', redirectTo: 'message', pathMatch: 'full' },
+  { path: 'message', component: MessageFormComponent },
+];
 
-export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)
-  ]
-};
+export const appConfig = [
+  provideRouter(routes),
+];
