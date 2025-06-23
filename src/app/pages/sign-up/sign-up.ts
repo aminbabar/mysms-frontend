@@ -33,7 +33,6 @@ export class SignUpComponent {
         next: (res: any) => {
           const token = res.headers.get('authorization')?.replace('Bearer ', '');
           if (token) localStorage.setItem('auth_token', token);
-          debugger;
           this.router.navigate(['/message']);
         },
         error: () => {

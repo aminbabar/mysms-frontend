@@ -1,6 +1,6 @@
 <header class="navbar">
   <h1>My SMS Messenger</h1>
-  <button class="logout-button" (click)="logout()" *ngIf="isLoggedIn()">Logout</button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" class="logout-button">Logout</button>
 </header>
 
 <main>
