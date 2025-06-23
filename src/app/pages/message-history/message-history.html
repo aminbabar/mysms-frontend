@@ -1,0 +1,16 @@
+<div class="history">
+    <h2>Message History ({{ messages.length }} messages)</h2>
+
+    <div *ngFor="let msg of messages" class="message-card">
+        <div class="message-header">
+            <span class="phone">{{ msg.to }}</span>
+            <span class="date">{{ msg.created_at | date:'EEEE, dd-MMM-yy HH:mm:ss \'UTC\'' : 'UTC' }}</span>
+        </div>
+
+        <div class="message-body">{{ msg.body }}</div>
+
+        <div class="message-char-count">{{ charCount(msg.body) }}/250</div>
+        
+    </div>
+</div>
+  

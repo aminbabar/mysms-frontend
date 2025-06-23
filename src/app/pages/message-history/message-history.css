@@ -1,0 +1,44 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-card {
+    background-color: white;
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.message-header .phone {
+    font-weight: bold;
+}
+
+.message-header .date {
+    font-size: 0.85rem;
+    color: grey;
+}
+
+.message-body {
+    white-space: pre-wrap;
+    padding: 0.75rem;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.message-char-count {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 0.8rem;
+    color: #555;
+}

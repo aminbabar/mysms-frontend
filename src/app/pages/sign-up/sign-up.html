@@ -1,0 +1,20 @@
+<div class="sign-in-container">
+    <h2 class="sign-in-title">Sign Up</h2>
+
+    <form (ngSubmit)="onRegister()" #form="ngForm" novalidate>
+        <label>Email</label>
+        <input type="email" name="email" [(ngModel)]="email" required />
+
+        <label>Password</label>
+        <input type="password" name="password" [(ngModel)]="password" required />
+
+        <div *ngIf="error" class="error-msg">{{ error }}</div>
+
+        <button type="submit" [disabled]="!form.valid">Create Account</button>
+
+        <p class="signup-link">
+            Already have an account?<a routerLink="/">Sign in</a>
+        </p>
+    </form>
+</div>
+  
