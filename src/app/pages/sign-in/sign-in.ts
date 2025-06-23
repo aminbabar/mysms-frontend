@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { environment } from '../../../environment';
+import { environment } from '../../../environments/environment';
 import { RouterLink } from '@angular/router';
 
 @Component({
